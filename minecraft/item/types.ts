@@ -20,7 +20,6 @@ interface ItemCreationResult {
 	[KubeJsSetter.parentModel](s: string): ItemCreationResult; // not supported
 	[KubeJsSetter.barColor](f: Function): ItemCreationResult; // not supported
 	[KubeJsSetter.barWidth](f: Function): ItemCreationResult; // not supported
-	[KubeJsSetter.food](a: any): ItemCreationResult; // not supported
 
 	[KubeJsSetter.fireResistant](b: boolean): ItemCreationResult;
 
@@ -151,12 +150,6 @@ interface ItemConfig {
 	 * @default Vanilla behavior.
 	 */
 	[ConfigFields.barWidth]?: Function;
-
-	/**
-	 * Set the food properties of the item.
-	 * @supported false
-	 */
-	[ConfigFields.food]?: any;
 
 	/**
 	 * Makes the item fire resistant like netherite tools.

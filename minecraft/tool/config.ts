@@ -22,16 +22,16 @@ enum KubeJsSetter {
 	speed = 'speed'
 }
 
-const PROPETIES_SETTERS: object = {
-	[ConfigFields.tier]: [KubeJsSetter.tier],
-	[ConfigFields.attackDamageBaseline]: [KubeJsSetter.attackDamageBaseline],
-	[ConfigFields.attackDamageBonus]: [KubeJsSetter.attackDamageBonus],
-	[ConfigFields.speedBaseline]: [KubeJsSetter.speedBaseline],
-	[ConfigFields.speed]: [KubeJsSetter.speed],
+const AVAILABLE_SETTERS: object = {
+	[KubeJsSetter.tier]: [ConfigFields.tier],
+	[KubeJsSetter.attackDamageBaseline]: [ConfigFields.attackDamageBaseline],
+	[KubeJsSetter.attackDamageBonus]: [ConfigFields.attackDamageBonus],
+	[KubeJsSetter.speedBaseline]: [ConfigFields.speedBaseline],
+	[KubeJsSetter.speed]: [ConfigFields.speed]
 };
 
 export {
 	ConfigFields,
 	KubeJsSetter,
-	PROPETIES_SETTERS
+	AVAILABLE_SETTERS
 };

@@ -1,8 +1,8 @@
-import { applyProperty } from '../Utils';
+import { applyPropertiesArray } from '../Utils';
 import { RegistryItemEvent } from '../Types';
 
 import { ItemConfig, ItemCreationResult } from './types';
-import { PROPETIES_SETTERS } from './config';
+import { AVAILABLE_SETTERS } from './config';
 
 /**
  * Create Item.
@@ -17,15 +17,10 @@ function create(event: RegistryItemEvent, cfg: ItemConfig): ItemCreationResult {
 		ITEM.displayName(cfg.name.display);
 	}
 
-	const CONFIG_VALUES: string[] = Object.keys(cfg);
-	
-	CONFIG_VALUES.forEach((el: string) => {
-		applyProperty({
-			item: ITEM,
-			propName: el,
-			propValue: (cfg as any)[el],
-			setters: PROPETIES_SETTERS
-		})
+	applyPropertiesArray({
+		item: ITEM,
+		cfg: cfg,
+		setters: AVAILABLE_SETTERS
 	});
 
 	return ITEM;

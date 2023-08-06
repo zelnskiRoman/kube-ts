@@ -2,7 +2,7 @@
  * Item config properties.
  */
 enum ConfigFields {
-	tooltip = 'description',
+	tooltip = 'tooltip',
 	texture = 'texture',
 	glow = 'isGlowing',
 	maxStackSize = 'stackSize',
@@ -24,7 +24,6 @@ enum ConfigFields {
 	use = 'use',
 	finishUsing = 'finishUsing',
 	releaseUsing = 'releaseUsing',
-	food = 'food',
 	subtypes = 'subtypes'
 }
 
@@ -55,39 +54,37 @@ enum KubeJsSetter {
 	use = 'use',
 	finishUsing = 'finishUsing',
 	releaseUsing = 'releaseUsing',
-	food = 'food',
 	subtypes = 'subtypes'
 }
 
-const PROPETIES_SETTERS: object = {
-	[ConfigFields.tooltip]: [KubeJsSetter.tooltip],
-	[ConfigFields.rarity]: [KubeJsSetter.rarity],
-	[ConfigFields.glow]: [KubeJsSetter.glow],
-	[ConfigFields.maxStackSize]: [KubeJsSetter.maxStackSize],
-	[ConfigFields.texture]: [KubeJsSetter.texture],
-	[ConfigFields.maxDamage]: [KubeJsSetter.maxDamage],
-	[ConfigFields.burnTime]: [KubeJsSetter.burnTime],
-	[ConfigFields.containerItem]: [KubeJsSetter.containerItem],
-	[ConfigFields.group]: [KubeJsSetter.group],
-	[ConfigFields.color]: [KubeJsSetter.color],
-	[ConfigFields.textureJson]: [KubeJsSetter.textureJson],
-	[ConfigFields.modelJson]: [KubeJsSetter.modelJson],
-	[ConfigFields.parentModel]: [KubeJsSetter.parentModel],
-	[ConfigFields.barColor]: [KubeJsSetter.barColor],
-	[ConfigFields.barWidth]: [KubeJsSetter.barWidth],
-	[ConfigFields.fireResistant]: [KubeJsSetter.fireResistant],
-	[ConfigFields.modifyAttribute]: [KubeJsSetter.modifyAttribute],
-	[ConfigFields.useAnimation]: [KubeJsSetter.useAnimation],
-	[ConfigFields.useDuration]: [KubeJsSetter.useDuration],
-	[ConfigFields.use]: [KubeJsSetter.use],
-	[ConfigFields.finishUsing]: [KubeJsSetter.finishUsing],
-	[ConfigFields.releaseUsing]: [KubeJsSetter.releaseUsing],
-	[ConfigFields.food]: [KubeJsSetter.food],
-	[ConfigFields.subtypes]: [KubeJsSetter.subtypes]
+const AVAILABLE_SETTERS: object = {
+	[KubeJsSetter.tooltip]: [ConfigFields.tooltip],
+	[KubeJsSetter.rarity]: [ConfigFields.rarity],
+	[KubeJsSetter.glow]: [ConfigFields.glow],
+	[KubeJsSetter.maxStackSize]: [ConfigFields.maxStackSize],
+	[KubeJsSetter.texture]: [ConfigFields.texture],
+	[KubeJsSetter.maxDamage]: [ConfigFields.maxDamage],
+	[KubeJsSetter.burnTime]: [ConfigFields.burnTime],
+	[KubeJsSetter.containerItem]: [ConfigFields.containerItem],
+	[KubeJsSetter.group]: [ConfigFields.group],
+	[KubeJsSetter.color]: [ConfigFields.color],
+	[KubeJsSetter.textureJson]: [ConfigFields.textureJson],
+	[KubeJsSetter.modelJson]: [ConfigFields.modelJson],
+	[KubeJsSetter.parentModel]: [ConfigFields.parentModel],
+	[KubeJsSetter.barColor]: [ConfigFields.barColor],
+	[KubeJsSetter.barWidth]: [ConfigFields.barWidth],
+	[KubeJsSetter.fireResistant]: [ConfigFields.fireResistant],
+	[KubeJsSetter.modifyAttribute]: [ConfigFields.modifyAttribute],
+	[KubeJsSetter.useAnimation]: [ConfigFields.useAnimation],
+	[KubeJsSetter.useDuration]: [ConfigFields.useDuration],
+	[KubeJsSetter.use]: [ConfigFields.use],
+	[KubeJsSetter.finishUsing]: [ConfigFields.finishUsing],
+	[KubeJsSetter.releaseUsing]: [ConfigFields.releaseUsing],
+	[KubeJsSetter.subtypes]: [ConfigFields.subtypes]
 };
 
 export {
 	ConfigFields,
 	KubeJsSetter,
-	PROPETIES_SETTERS
+	AVAILABLE_SETTERS
 };
